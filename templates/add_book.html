@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Добавить книгу</h2>
+
+<form method="post">
+    <p>
+        Название:<br>
+        <input type="text" name="title">
+    </p>
+    <p>
+        Автор:<br>
+        <input type="text" name="author">
+    </p>
+    <p>
+        Год:<br>
+        <input type="number" name="year">
+    </p>
+    <p>
+        Статус:<br>
+        <select name="status">
+            <option value="available">available</option>
+            <option value="borrowed">borrowed</option>
+        </select>
+    </p>
+
+    <button type="submit">Добавить</button>
+</form>
+{% endblock %}

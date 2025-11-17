@@ -1,0 +1,16 @@
+<h2>Редактировать книгу</h2>
+
+<form method="post">
+    Название: <input type="text" name="title" value="{{ book.title }}"><br>
+    Автор: <input type="text" name="author" value="{{ book.author }}"><br>
+    Год: <input type="number" name="year" value="{{ book.year }}"><br>
+    Статус:
+    <select name="status">
+        <option value="available" {% if book.status=="available" %}selected{% endif %}>available</option>
+        <option value="reading" {% if book.status=="reading" %}selected{% endif %}>reading</option>
+        <option value="finished" {% if book.status=="finished" %}selected{% endif %}>finished</option>
+    </select>
+
+    <br>
+    <button type="submit">Сохранить</button>
+</form>
